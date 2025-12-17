@@ -1,0 +1,1 @@
+# Shallow-seismic-full-waveform-inversion-with-U-net-and-a-hybrid-loss-function

@@ -1,4 +1,4 @@
-# Shallow seismic full waveform inversion with U net and a hybrid loss function(under review)
+# Shallow seismic full waveform inversion with U-net and a hybrid loss function(under review)
 The paper will be published on Geophysical Journal International
 This program aims to implement the simulate results for those researchers who are interested in our research. Significantly, this program only includes simulate data, while field data is limited to come out due to the privacy.
 

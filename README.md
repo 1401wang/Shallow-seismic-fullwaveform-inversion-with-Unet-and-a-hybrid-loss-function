@@ -1,13 +1,13 @@
 # Shallow seismic full waveform inversion with U-net and a hybrid loss function(under review)
 The paper will be published on Geophysical Journal International
-This program aims to implement the simulate results for those researchers who are interested in our research. Significantly, this program only includes simulate data, while field data is limited to come out due to the privacy.
+This program aims to implement the simulate results for those researchers who are interested in our research. This program only includes simulate data, while field data is limited to come out due to the privacy. Significantly, this repository only include README.md. Dataset available on [Zenodo](https://zenodo.org/records/19042200) 
 
 ## Dataset
 For the training process, we generate 6400 simulated velocity models and their seismograms by solving the elastic wave equation. The data can be found in 'MEUnet_Slurm/MEUnet/data'. 
 
 ## Training & Testing
 ### Pre-training
-In our paper, 'MEUnet_Slurm' is implemented for training and testing. We have already placed the pre-trained model (Simulate_MEUnetModel_TrainSize5120.0_Epoch200_BatchSize16_LR0.001_lamda1_dropout_best.pkl) in the 'MEUnet_Slurm/MEUnet/models/SimulateModel'. Figure.5 in the paper can be implemented through running 'MEUnet_test.py'. Significantly, 'MEUnet_train_val.py' in 'MEUnet_Slurm' cannot be run due to the difference of Graphics Card Types. What we have mentioned in the paper is that we use four V100 for training at supercomputing center. But we also provide 'MEUnet' folder which can be run locally. Training code will take 20 minutes on 4 V100 and 3 hours on one Nvidia GTX4060.
+In our paper, 'MEUnet_Slurm' is implemented for training and testing. We have already placed the pre-trained model (Simulate_MEUnetModel_TrainSize5120.0_Epoch200_BatchSize16_LR0.001_lamda1_dropout_best.pkl) in the 'MEUnet_Slurm/MEUnet/models/SimulateModel'. Figure.5 in the paper can be implemented through running 'MEUnet_test.py'. Significantly, 'MEUnet_train_val.py' in 'MEUnet_Slurm' cannot be run due to the difference of Graphics Card Types. What we have mentioned in the paper is that we use four V100 for training at supercomputing center. But we also provide 'MEUnet' folder which can be run locally. Training code will take 20 minutes on 4 V100 and 3 hours on one Nvidia GTX4060. If you need to retrain, the seismograms in training dataset are available on request from the authors.
 
 ### Transfer learning
 The 'test_all.py' in 'MEUnet_TransferLearning' can implement Figure.9 in the paper. We also placed the transfer model (Simulate_MEUnetModel_TrainSize640.0_Epoch400_BatchSize16_LR0.001_lamda1_dropout_best_transfer.pkl) in the 'MEUnet_TransferLearning/MEUnet/models/SimulateModel'.
